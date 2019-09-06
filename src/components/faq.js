@@ -26,14 +26,14 @@ const FAQ = () => {
           <div onClick={() => showq1(!q1)}><h3 className="text-lg text-lg uppercase text-primary flex items-center cursor-pointer"><span className="text-sm"><FaAngleDown /></span>How much can I borrow and for what specific uses?</h3></div>
           <Collapse isOpened={q1} springConfig={{stiffness: 150, damping: 30}}>
                <p>The maximum amount you can borrow will depend on your program. You can finance your tuition and cost of living expenses.</p>
-               <ul>
+               <ul className="mb-0 pb-4">
                     {faq.loanRange.map(program => {
                          return <li>
                               <strong>For {program.programName},</strong> you may borrow from $2,000 up to {program.maxAmount} for tuition. {program.col ? <span>You may also borrow up to {program.colAmount} for cost of living.</span> : <span>Cost of living is not available for this program.</span>}
                          </li>
                     })}
                </ul>
-               <p className="mb-0 pb-4"><strong>Please note:</strong> In order to finance cost of living, borrow at least $2,000 in tuition financing. You will pay your cash deposit directly to <strong>{schoolName}</strong>.</p>
+               {faq.costOfLiving && <p className="mb-0 pb-4"><strong>Please note:</strong> In order to finance cost of living, borrow at least $2,000 in tuition financing. You will pay your cash deposit directly to <strong>{schoolName}</strong>.</p>}
           </Collapse>
           
           {faq.costOfLiving &&

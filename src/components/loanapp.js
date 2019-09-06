@@ -13,18 +13,14 @@ const LoanApp = React.forwardRef((props, ref) => {
     const [disclaimers, toggleDisclaimers] = useState(false)
     const [loanUrl, setLoanUrl] = useState(programLoanInfo[0].url)
     const [programName, setProgramName] = useState(programLoanInfo[0].name)
-    const [active, setActive] = useState({
-        program0: false,
-        program1: false,
-        program2: false
-    })
+    const [active, setActive] = useState(false)
     const activeClass = "menu-item cursor-pointer border-2 rounded border-black text-center py-2 mb-2 bg-primary text-white" 
     const inactiveClass = "menu-item cursor-pointer border-2 rounded border-black text-center py-2 mb-2" 
     const formName = `${props.schoolName}_apply_now program-apply flex flex-col items-center`
     const costOfLiving = true // set to false of cost of living is not available
-    const multiplePrograms = true // set to false if there is only one program
-    const onlinePrograms = false // set to true if there is at least one online/remote program offered
-    const schoolHQState = 'WA' // if online programs are offered, put the two letter abbreviation for school headquarters state
+    const multiplePrograms = false // set to false if there is only one program
+    const onlinePrograms = true // set to true if there is at least one online/remote program offered
+    const schoolHQState = 'NY' // if online programs are offered, put the two letter abbreviation for school headquarters state
 
     const handleChange = e => {
         setEmail(e.target.value)

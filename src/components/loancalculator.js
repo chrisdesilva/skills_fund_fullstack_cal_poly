@@ -19,7 +19,7 @@ const LoanCalculator = () => {
     const [interestPayment, setInterestPayment] = useState({ payment36: null, payment60: null })
     const [monthlyPayment, setMonthlyPayment] = useState({ payment36: null, payment60: null })
     const [loanType, setLoanType] = useState('0') // default to 0 for interest-only, 1 for immediate repayment
-    const [multiMetros, showMetros] = useState('')
+    const [multiMetros, showMetros] = useState(false)
     const [loanInformation, setLoanInformation] = useState(programLoanInfo[0].loanInfo)
     const [programName, setProgramName] = useState(programLoanInfo[0].name)
 
@@ -177,6 +177,7 @@ const LoanCalculator = () => {
     }
 
     const calculateUpdatedAmount = () => {
+        setLoanAmount(defaultLoanAmount)
         showLoanOptions(false)
     }
 
