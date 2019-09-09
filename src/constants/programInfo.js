@@ -12,7 +12,7 @@ export const headline = "Learn to Code at Cal Poly Extended Education" // update
 
 export const leadContent = {
     header: "Your last step on the path toward changing your career",
-    paragraph: `${schoolName} helps students build programming skills with their part-time, online program. ${schoolName} partners with Skills Fund to offer tuition and cost of living financing so more students like you can access their program.`
+    paragraph: `${schoolName} helps students build programming skills with their part-time, online program. ${schoolName} partners with Skills Fund to offer tuition financing so more students like you can access their program.`
 }
 
 export const threeStepCardText = {
