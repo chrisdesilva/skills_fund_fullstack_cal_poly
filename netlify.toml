@@ -2,3 +2,8 @@
   from = "/go"
   to = "/?utm_source=school&utm_medium=printedskfbrochure&utm_campaign=studentbrochure"
 
+[[redirects]]
+  from = "https://calpolybootcamp.skills.fund"
+  to = "/"
+
+
