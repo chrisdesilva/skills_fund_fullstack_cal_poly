@@ -42,7 +42,6 @@ const LoanCalculator = () => {
         setLoanInformation(programLoanInfo[1].loanInfo)
         setLoanType("0")
         setProgramName(programLoanInfo[1].name)
-        showMetros("Program 2")
         break
       case programLoanInfo[2].name:
         setLoanInformation(programLoanInfo[2].loanInfo)
