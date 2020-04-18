@@ -1,5 +1,10 @@
 import logo from "../images/logo_calpoly.png" // add school logo to images folder and import here
 
+export const applicationsLive = true // set to false if not currently accepting applications
+export const disabledLoanAppFormID = "69140c47-bb03-4a1b-b674-cc136fdea23d" // Hubspot ID for all disabled apply now lead captures
+export const nextCohortStartDate = "October 29, 2019"
+export const showPopup = false
+
 // ***** BEGIN GENERAL SCHOOL INFO *****
 
 export const schoolLogo = logo // go to header.js if height needs adjustment
@@ -7,6 +12,8 @@ export const schoolLogo = logo // go to header.js if height needs adjustment
 export const schoolName = "Cal Poly Extended Education"
 
 export const schoolURL = "https://bootcamp-extended.calpoly.edu/" // update with url of school's website
+
+export const skfURL = "https://calpolyextendedbootcamp.skills.fund/" // update with Skills Fund url
 
 export const headline = "Learn to Code at Cal Poly Extended Education" // update headline as appropriate
 
@@ -42,13 +49,35 @@ export const programLoanInfo = [
       maxLoanAmt: 11910,
       loanTerm36: true,
       loanTerm60: true,
-      "0": {
-        k: 8,
-        apr36: 10.94,
-        apr60: 12.41,
+      "Interest Only": {
+        k: 9,
+        apr36: 11.34,
+        apr60: 12.73,
       },
-      "1": null,
+      "Immediate Repayment": null,
     },
+    defaultLoanType: "Interest Only", // leave at 0 for interest-only, set to 1 for immediate repayment
+    showMetros: false, // true if there are multiple metros with different tuition amounts for the same program
+    showLoanTypes: false, // true if both IR and IO are available
+    loanTypes: ["Interest Only"],
+    locations: ["Metro 1", "Metro 2", "Metro 3"],
+    metros: [
+      // list in same order as locations array above
+      {
+        location: "Metro 1",
+        loanInfo: {
+          maxLoanAmt: 11910,
+          loanTerm36: true,
+          loanTerm60: true,
+          "Interest Only": {
+            k: 9,
+            apr36: 11.34,
+            apr60: 12.73,
+          },
+          "Immediate Repayment": null,
+        },
+      },
+    ],
   },
   {
     name: "Cyber Bootcamp",
@@ -57,13 +86,35 @@ export const programLoanInfo = [
       maxLoanAmt: 11910,
       loanTerm36: true,
       loanTerm60: true,
-      "0": {
-        k: 8,
-        apr36: 10.94,
-        apr60: 12.41,
+      "Interest Only": {
+        k: 9,
+        apr36: 11.34,
+        apr60: 12.73,
       },
-      "1": null,
+      "Immediate Repayment": null,
     },
+    defaultLoanType: "Interest Only", // leave at 0 for interest-only, set to 1 for immediate repayment
+    showMetros: false, // true if there are multiple metros with different tuition amounts for the same program
+    showLoanTypes: false, // true if both IR and IO are available
+    loanTypes: ["Interest Only"],
+    locations: ["Metro 1", "Metro 2", "Metro 3"],
+    metros: [
+      // list in same order as locations array above
+      {
+        location: "Metro 1",
+        loanInfo: {
+          maxLoanAmt: 11910,
+          loanTerm36: true,
+          loanTerm60: true,
+          "Interest Only": {
+            k: 9,
+            apr36: 11.34,
+            apr60: 12.73,
+          },
+          "Immediate Repayment": null,
+        },
+      },
+    ],
   },
 ]
 
@@ -116,8 +167,8 @@ export const paymentTable = {
 export const schoolInfo = {
   interestRate36: "8.99%",
   interestRate60: "10.99%",
-  APRRange36: "10.94%",
-  APRRange60: "12.41%",
+  APRRange36: "11.34%",
+  APRRange60: "12.73%",
   interestOnly: [
     {
       programName: "",
@@ -160,15 +211,15 @@ export const faq = {
   multipleLoanLengths: true, // true if 36 and 60 month options are both available
   multipleLoanTypes: false, // true if both IR and IO are available
   multiPrograms: true, // only true if there are multiple programs
-  origFee: 0.04,
+  origFee: 0.05,
 
   // interest payment FAQ info
   interestRate36: "8.99%",
   interestRate60: "10.99%",
-  APR36: "10.94%",
-  APR60: "12.41%",
-  IOPayment36: "$77.91",
-  IOPayment60: "$95.25",
+  APR36: "11.34%",
+  APR60: "12.37%",
+  IOPayment36: "$78.66",
+  IOPayment60: "$96.16",
 
   // max loan amounts by program for faq1
   loanRange: [
